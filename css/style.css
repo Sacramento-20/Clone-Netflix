@@ -12,10 +12,12 @@
     box-sizing: border-box;
 }
 
-/* corpo principal do site */
+/* elementos base corpo do site */
 body{
     background-color: var(--preto);
     font-family: 'Times New Roman', Times, serif;
+    /* todas as fontes do site */
+    color: white;
 }
 
 /* div da nav bar e logo */
@@ -49,4 +51,39 @@ header nav a{
 /* deixar os botoes da nav bar mais clarinhos */
 header nav a:hover{
     color: #fff;
+}
+
+/* filme principal */
+
+.filme-principal{
+    font-size: 16px;
+    /* colocar a imagem como fundo da div */
+    background:url('/img/filme-principal/Spider-Man.jpg');
+    height: 400px;
+    /* colocar a imagem formatada na div */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+    /* falta a responsividade para paginas maiores */
+    
+}
+
+/* quando passa o mouse em cima da imagem ela escurece, em vez de ja ficar escura */
+.filme-principal:hover{
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%),url('/img/filme-principal/Spider-Man.jpg');
+    background-size: cover;
+}
+
+/* texto de descrição do filme */
+.filme-principal .descricao{
+    margin-bottom: 30px;
+}
+
+/* titulo do filme principal */
+.filme-principal .container .titulo{
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
 }
