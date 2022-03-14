@@ -1,0 +1,52 @@
+/* criando variavel para facilitar na alteração do site */
+:root{
+    --vermelho:  #E50914;
+    --preto: #141414;
+}
+
+/* reset css, para tirar todas as mergens e bordas desnecessárias */
+*{
+    margin: 0;
+    padding: 0;
+    /* impede que o conteudo saia da box */
+    box-sizing: border-box;
+}
+
+/* corpo principal do site */
+body{
+    background-color: var(--preto);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* div da nav bar e logo */
+/* flex box, maneira de alinhar os elementos em uma div */
+header .container{
+    display: flex;
+    /* padrão */
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* estilização do logo */
+header .logo{
+    color: var(--vermelho);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    width: 200px;
+    margin: 20px;
+}
+
+/* links da nav bar */
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+/* deixar os botoes da nav bar mais clarinhos */
+header nav a:hover{
+    color: #fff;
+}
