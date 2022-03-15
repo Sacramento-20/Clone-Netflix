@@ -59,7 +59,7 @@ header nav a:hover{
     font-size: 16px;
     /* colocar a imagem como fundo da div */
     background:url('/img/filme-principal/Spider-Man.jpg');
-    height: 400px;
+    height: 600px;
     /* colocar a imagem formatada na div */
     background-size: cover;
     display: flex;
@@ -67,23 +67,67 @@ header nav a:hover{
     justify-content: center;
     align-items: flex-start;
     
+    /* -webkit-filter:grayscale(100%); */
     /* falta a responsividade para paginas maiores */
-    
+
+    /* transição quando coloca o mouse na foto */
+    /* transition: .3s ease all; */
+   
 }
 
 /* quando passa o mouse em cima da imagem ela escurece, em vez de ja ficar escura */
 .filme-principal:hover{
+    
+    /* -webkit-filter: opacity(50%);*/
+    /* transition: 1s;  */
+    
     background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%),url('/img/filme-principal/Spider-Man.jpg');
-    background-size: cover;
+    
+    background-size: cover; 
 }
 
 /* texto de descrição do filme */
 .filme-principal .descricao{
-    margin-bottom: 30px;
+    margin-left: 2%;
+    margin-bottom: 3%;
+    font-size: 120%;
+    
 }
 
 /* titulo do filme principal */
 .filme-principal .container .titulo{
-    font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
+    
+    margin-top: 15%;
+    font-size: 230%;
+    margin-bottom: 1%;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    margin-left: 2%;
+}
+
+/* estilizando botões */
+.filme-principal .botoes .botao{
+    
+    background-color:rgba(0, 0, 0, .50%) ;
+    border: none;
+    color: white;
+    /* border-radius: 5%; */
+
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;
+} 
+
+/* colocando uma transiçãi nos botoes */
+.filme-principal .botoes .botao:hover{
+    transition: .3s ease all;
+    background-color: white;
+    color: black;
+    
+}
+
+/* alinhando os icones nos botoes */
+.filme-principal .botoes .botao i{
+    margin-right: 8px;
 }
