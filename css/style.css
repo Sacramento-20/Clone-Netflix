@@ -58,6 +58,7 @@ header nav a:hover{
 .filme-principal{
     font-size: 16px;
     /* colocar a imagem como fundo da div */
+    /* background:linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%),url('/img/filme-principal/Spider-Man.jpg'); */
     background:url('/img/filme-principal/Spider-Man.jpg');
     height: 600px;
     /* colocar a imagem formatada na div */
@@ -67,28 +68,32 @@ header nav a:hover{
     justify-content: center;
     align-items: flex-start;
     
-    /* -webkit-filter:grayscale(100%); */
+    
     /* falta a responsividade para paginas maiores */
-
+    
     /* transição quando coloca o mouse na foto */
-    /* transition: .3s ease all; */
-   
+    transition: .3s ease all;
+    
 }
 
 /* quando passa o mouse em cima da imagem ela escurece, em vez de ja ficar escura */
 .filme-principal:hover{
     
-    /* -webkit-filter: opacity(50%);*/
-    /* transition: 1s;  */
-    
+    /* -webkit-filter: opacity(50%); */
     background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%),url('/img/filme-principal/Spider-Man.jpg');
-    
     background-size: cover; 
+}
+
+/* mexendo em toda a caixa do container, que nesse caso pode haver mais de uma na div */
+.filme-principal .container{
+    margin-left: 30px;
+    width: 70%;
+    /* background-color: green; */
+    
 }
 
 /* texto de descrição do filme */
 .filme-principal .descricao{
-    margin-left: 2%;
     margin-bottom: 3%;
     font-size: 120%;
     
@@ -99,9 +104,9 @@ header nav a:hover{
     
     margin-top: 15%;
     font-size: 230%;
-    margin-bottom: 1%;
+    margin-bottom: 2%;
     font-family: 'Trebuchet MS', Arial, sans-serif;
-    margin-left: 2%;
+    
 }
 
 /* estilizando botões */
@@ -131,3 +136,5 @@ header nav a:hover{
 .filme-principal .botoes .botao i{
     margin-right: 8px;
 }
+
+/* lembrar de colocar os valores das fontes em porcentagem */
